@@ -1,0 +1,40 @@
+
+#변수 : 데이터와 결과값을 저장하는 공간
+a = 1
+A = 2
+A1 = 5
+print(a+A+A1)
+
+# 한꺼번에 여러개의 변수를 설정할 수 있다.
+a, b, c = 3, 2, 1
+print(a,b,c)
+
+# 변수명에 새로운 값을 넣으면 이전 값은 사라진다.
+a, b = 10, 20
+print(a, b)
+
+#값교환
+a, b = b, a
+print(a, b)
+
+#변수 타입
+a = 12345
+print(type(a)) #int형(정수)
+a = 12.12345678
+print(type(a)) #float형(실수)
+a="student"
+print(type(a)) #str형(문자열)
+
+#출력방식
+print('number')
+a, b, c = 1, 2, 3
+print(a, b, c)
+print("number : ", a, b, c)
+print(a, b, c, sep='\n') #sep은 각 변수 사이를 설정하고 싶을때 사용 '\n'은 줄바꿈
+print(a)
+print(b)
+print(c) #print는 찍고 나면 자동으로 줄바꿈이 된다
+print(a, end=' ') #end는 변수찍고 띄어쓰기 (줄바꿈을 없애준다)
+print(b, end=' ')
+print(c)
+
