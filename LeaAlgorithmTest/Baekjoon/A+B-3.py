@@ -13,9 +13,24 @@ A+b - 3
 각 테스트 케이스마다 A+B를 출력한다
 '''
 
+# T = int(input())
+# a = []
+
+# for i in range(T): #입력받은 T의 갯수만큼 테스트
+#     a, b = map(int, input().split()) #a, b 한줄로 입력받기
+#     sum = a+b
+#     a.append(sum)
+#     for i in a:
+#         print(a)
+
+
+
 T = int(input())
 
 for i in range(T): #입력받은 T의 갯수만큼 테스트
     a, b = map(int, input().split()) #a, b 한줄로 입력받기
     print(a+b)
+
+
+
 
