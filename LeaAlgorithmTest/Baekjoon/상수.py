@@ -13,6 +13,7 @@
 '''
 
 
+#1
 a, b = input().split() #문자열로 받는다 321 456
 
 a = int(a[2]+a[1]+a[0]) #123
@@ -22,5 +23,21 @@ if a > b:
     print(a)
 else:
     print(b)
+
+
+
+
+#2
+
+a, b = input().split()
+
+a="".join(reversed(a))
+b="".join(reversed(b))
+
+if a>b:
+    print(a)
+else:
+    print(b)
+
 
 
