@@ -13,31 +13,44 @@
 '''
 
 
-#1
-a, b = input().split() #문자열로 받는다 321 456
+# #1
+# a, b = input().split() #문자열로 받는다 321 456
 
-a = int(a[2]+a[1]+a[0]) #123
-b = int(b[2]+b[1]+b[0]) #654
+# a = int(a[2]+a[1]+a[0]) #123
+# b = int(b[2]+b[1]+b[0]) #654
 
-if a > b:
-    print(a)
-else:
-    print(b)
-
-
+# if a > b:
+#     print(a)
+# else:
+#     print(b)
 
 
-#2
+
+
+# #2
 
 a, b = input().split()
 
 a="".join(reversed(a))
 b="".join(reversed(b))
 
-if a>b:
-    print(a)
-else:
-    print(b)
+# if a>b:
+#     print(a)
+# else:
+#     print(b)
+
+print(max(a,b))
 
 
+
+#3
+
+# nums = []
+# a, b = map(int, input().split())
+# nums.reverse(a)
+# nums.reverse(b)
+# nums.append(a)
+# nums.append(b)
+
+# print(max(nums))
 
