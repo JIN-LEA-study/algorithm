@@ -9,8 +9,15 @@ Python을 사용하고 있다면, input 대신 sys.stdin.readline을 사용할 �
 
 '''
 
-t = int(input())
+# t = int(input())
 
-for i in range (t):
-    a, b =map(int, input().split())
+# for i in range (t):
+#     a, b =map(int, input().split())
+#     print(a+b)
+
+import sys
+
+t = int(input())
+for i in range(t):
+    a, b = map(int, sys.stdin.readline().split())
     print(a+b)

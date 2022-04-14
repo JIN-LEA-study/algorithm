@@ -7,8 +7,8 @@
 '''
 
 word = input() #단어입력받기
-word_list=list(set(word)) #리스트 안에 한글자씩
-cnt=[] #리스트 담아주기
+word_list=list(set(word)) #리스트 안에 한글자씩, 중복 단어 없애줌
+cnt_list=[]
 
 for i in word_list:
 
