@@ -38,7 +38,7 @@ for i in range(n):
         for m in range(j+1, n):
             res.add(allnums[i]+allnums[j]+allnums[m]) #set()은 append가 아니라 add
 
-res=list(res)
+res=list(res) #sort는 list에서만 가능
 res.sort(reverse=True)
 print(res[k-1])
 
