@@ -21,15 +21,17 @@
 
 
 n, m = map(int, input().split())
-cnt=[0]*(n+m+3) #0으로 초기화
+cnt=[0]*(n+m+3) #0으로 초기화, 왜 여유롭게 세팅을 해주는가?
 max=0
 
 for i in range(1, n+1):
     for j in range(1, m+1):
         cnt[i+j]+=1
-for i in range(n+m+1):
+
+for i in range(n+m+1): #최대값찾기
     if cnt[i] > max:
         max=cnt[i]
+
 for i in range(n+m+1):
     if cnt[i] == max:
         print(i, end= " ")
