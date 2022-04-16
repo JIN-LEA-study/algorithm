@@ -74,6 +74,9 @@ min_index = -1
 # else:
 #     result = average-x
 
+
+#다시 풀어보기
+
 for i in range(len(scores)):
     if scores[i] > average:
         diff = scores[i] - average
@@ -86,6 +89,8 @@ for i in range(len(scores)):
         min_index = i
 
 print(min_index+1)
+
+
 
 
 # print(min_index+1) #인덱스는 0부터 시작하니까, 번째의 값을 구할 경우 +1
