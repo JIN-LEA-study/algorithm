@@ -28,3 +28,5 @@ def number(n):
         return x
 print(number(int(input())))
 
+
+
