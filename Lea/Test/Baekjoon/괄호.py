@@ -37,3 +37,51 @@ for _ in range(t):
       print('YES')
     else:
       print('NO')
+
+
+
+#푸는방법 2 (함수이용)
+
+def validate(ps):
+    stack = []
+    for p in ps:
+        if p == '(':
+            stack.append(p)
+        elif stack:
+            stack.pop()
+        else:
+            return False
+
+    if stack:
+        return False
+    return True
+
+t = int(input())
+
+for _ in range(t):
+    ps = input()
+    print("YES" if validate(ps) else "NO")
+
+
+
+#푸는방법 3 (count 방법)
+
+def validate(ps):
+    count = 0
+    for p in ps:
+        if p == '(':
+            count += 1
+        elif count > 0:
+            count -= 1
+        else:
+            return False
+
+    if count > 0:
+        return False
+    return True
+
+t = int(input())
+
+for _ in range(t):
+    ps = input()
+    print("YES" if validate(ps) else "NO")
