@@ -30,16 +30,34 @@
 '''
 
 
-num, m = map(int, input().split())
-num = list(map(int, str(num)))
-stack = []
 
-for x in num:
-    while stack and m > 0 and stack[-1] < x:
-        stack.pop()
-        m -= 1
+nums, m = input().split()
+m = int(m)
+# nums = list(nums)
+
+# nums, m = map(int, input().split()) #정수를 띄어쓰기로 받기
+# nums = list(map(int, str(nums))) #[5, 2, 7, 6, 8, 2, 3]
+stack = [] #빈 스택 만들어주기
+
+for x in nums:
+    while m > 0 and stack:
+        if stack[-1] < x:
+            stack.pop()
+            m -= 1
+        else:
+            break
     stack.append(x)
-if m!=0:
-    stack=stack[:-m]
-for x in stack:
-    print(x, end='')
+
+while m > 0:
+    stack.pop()
+    m -= 1
+
+# if m != 0:
+    # while m > 0:
+    #     stack.pop()
+    #     m -= 1
+
+print("".join(stack))
+
+# for x in stack:
+#     print(x, end='')

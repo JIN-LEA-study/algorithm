@@ -41,3 +41,16 @@ def isPrime(x):
     return True
 
 def reverse(x):
+    result = 0
+    while x > 0:
+        digit = x % 10
+        result = result * 10 + digit
+        x = x // 10
+    return result
+
+
+for x in numbers:
+    tmp = reverse(x)
+    if isPrime(tmp):
+        print(tmp)
+
