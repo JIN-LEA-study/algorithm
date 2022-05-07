@@ -1,7 +1,4 @@
 from collections import deque
-
-
-from collections import deque
 n = int(input())
 numbers = list(map(int,input().split()));
 stack = deque()

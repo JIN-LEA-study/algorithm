@@ -6,7 +6,11 @@ const input = require("fs")
 
 const n = +input[0];
 const stack = [];
+
+// [3,5,2,7]
 const numbers = input[1].split(" ").map(Number);
+
+// [-1,-1,-1,-1]
 let result = new Array(n).fill(-1);
 
 for (let i = 0; i < n; i++) {
