@@ -12,6 +12,9 @@
   <a href="http://mazassumnida.wtf/api/v2/generate_badge?boj=166354">
     <img align="center" width=360 src="http://mazassumnida.wtf/api/v2/generate_badge?boj=166354" alt="Solved.ac프로필" />
   </a>
+  <a href="http://mazassumnida.wtf/api/v2/generate_badge?boj=sesa0802">
+    <img align="center" width=360 src="http://mazassumnida.wtf/api/v2/generate_badge?boj=sesa0802" alt="Solved.ac프로필" />
+  </a>
 </div>
 
 ## :wrench:Using Programming Language
