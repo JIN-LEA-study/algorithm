@@ -19,3 +19,27 @@
 
 
 '''
+
+
+notation = input()
+
+stack = [] #스택
+answer = '' #출력
+
+for i in notation:
+  if i == '+' or i == '-':
+    while stack and stack[-1] != '(':
+      answer += stack.pop()
+  elif i == '*' or i == '/':
+    while stack and stack[-1] == '*' or stack[-1] == '/':
+      answer += stack.pop()
+    stack.append(i)
+  elif i == '(':
+    stack.append(i)
+  elif i == ')':
+    while stack and stack[-1] != '(':
+      answer += stack.pop()
+    stack.pop()
+  else:
+    answer += i
+    
