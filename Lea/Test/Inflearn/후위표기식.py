@@ -21,25 +21,49 @@
 '''
 
 
-notation = input()
+# notation = input()
 
-stack = [] #스택
-answer = '' #출력
+# stack = [] #스택
+# answer = '' #출력
 
-for i in notation:
-  if i == '+' or i == '-':
-    while stack and stack[-1] != '(':
-      answer += stack.pop()
-  elif i == '*' or i == '/':
-    while stack and stack[-1] == '*' or stack[-1] == '/':
-      answer += stack.pop()
-    stack.append(i)
-  elif i == '(':
-    stack.append(i)
-  elif i == ')':
-    while stack and stack[-1] != '(':
-      answer += stack.pop()
-    stack.pop()
-  else:
-    answer += i
-    
+# for i in notation:
+#   if i == '+' or i == '-':
+#     while stack and stack[-1] != '(':
+#       answer += stack.pop()
+#   elif i == '*' or i == '/':
+#     while stack and stack[-1] == '*' or stack[-1] == '/':
+#       answer += stack.pop()
+#     stack.append(i)
+#   elif i == '(':
+#     stack.append(i)
+#   elif i == ')':
+#     while stack and stack[-1] != '(':
+#       answer += stack.pop()
+#     stack.pop()
+#   else:
+#     answer += i
+
+
+
+# 숫자를 만나면 출력
+# 연산자 우선 순위 * / , + - 왼쪽에 있는 것이 우선
+# 우선 순위가 같은 경우엔 스택에 있는 연산자가 우선
+
+
+a = input()
+stack = []
+res = ''
+
+for x in a :
+    if x.isdecimal():
+        res += x
+    else:
+        if x == '(':
+            stack.append(x)
+        elif x == '*' or x == '/':
+            while stack and (stack[-1] == '*' or stack[-1] == '/'):
+                res += stack.pop()
+            stack.append(x)
+        elif x == '+' or x == '-':
+            while stack and stack[-1] != '(':
+                res += stack.pop()
