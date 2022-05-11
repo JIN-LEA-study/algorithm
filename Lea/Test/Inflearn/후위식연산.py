@@ -12,3 +12,33 @@
 ▣ 출력예제 1 12
 
 '''
+
+
+notation = input()
+stack = []
+
+for i in notation:
+    if i.isdecimal():
+        stack.append(int(i))
+    else:
+        if i == '+' :
+            number1 = stack.pop()
+            number2 = stack.pop()
+            stack.append(number2 + number1)
+        elif i == '-':
+            number1 = stack.pop()
+            number2 = stack.pop()
+            stack.append(number2 - number1)
+        elif i == '*':
+            number1 = stack.pop()
+            number2 = stack.pop()
+            stack.append(number2 * number1)
+        elif i == '/':
+            number1 = stack.pop()
+            number2 = stack.pop()
+            stack.append(number2 / number1)
+print(stack[0])
+
+
+
+
