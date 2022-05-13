@@ -1,6 +1,4 @@
-import operator
 from collections import deque
-from functools import reduce
 
 M, N = map(int,input().split())
 graph = [list(map(int,input().split())) for _ in range(N)]
@@ -27,11 +25,10 @@ def bfs():
                 graph[nx][ny] = graph[x][y] + 1
                 queue.append([nx,ny])
 bfs()
-arr = list(reduce(operator.add,graph))
-
-
-if arr.count(0):
-    print(-1)
-else:
-    res = max(arr)
-    print(res - 1)
+for i in graph:
+    for j in i:
+        if j == 0:
+            print(-1)
+            exit(0)
+    res = max(res,max(i))
+print(res - 1)
