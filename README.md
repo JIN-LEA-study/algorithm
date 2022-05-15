@@ -15,6 +15,9 @@
   <a href="https://solved.ac/profile/sesa0802">
     <img align="center" width=360 src="http://mazassumnida.wtf/api/v2/generate_badge?boj=sesa0802" alt="Solved.ac프로필" />
   </a>
+  <a href="https://solved.ac/profile/2ykwang">
+    <img align="center" width=360 src="http://mazassumnida.wtf/api/v2/generate_badge?boj=2ykwang" alt="Solved.ac프로필" />
+  </a>
 </div>
 
 ## :wrench:Using Programming Language
