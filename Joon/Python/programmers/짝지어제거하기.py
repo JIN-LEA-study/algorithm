@@ -8,5 +8,5 @@ def solution(s):
             else:
                 stack.append(x)
         else:
-        	stack.append(x)        
+            stack.append(x)        
     return 1 if not stack else 0
