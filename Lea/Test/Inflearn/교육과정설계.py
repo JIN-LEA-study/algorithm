@@ -30,4 +30,9 @@ for i in range(n):
   for x in plan:
     if x in dq:
       if x! = dq.popleft():
-        print('')
+        print('#%d No' %(i+1))
+  else:
+    if len(dq) == 0:
+      print('#%d Yes' %(i+1))
+    else:
+      print('#%d No' %(i+1))
