@@ -16,8 +16,8 @@ N자리 숫자가 주어졌을 때, 여기서 숫자 K개를 지워서 얻을 �
 
 '''
 
-n, k = map(int, input().split())
-number = list(input())
+n, k = map(int, input().split()) #정수로 입력받기
+number = list(input()) #리스트
 
 ans = []
 cnt = k
