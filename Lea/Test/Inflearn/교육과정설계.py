@@ -10,6 +10,7 @@ C, G, E, A, D, B 순서로 짰다면 잘 못 설계된 수업계획이 됩니다
 필수과목순서가 주어지면 현수가 짠 N개의 수업설계가 잘된 것이면 “YES", 잘못된 것이면 ”NO“를 출력하는 프로그램을 작성하세요.
 
 입력
+
 첫 줄에 한 줄에 필수과목의 순서가 주어집니다. 모든 과목은 영문 대문자입니다.
 두 번째 줄에 N(1<=N<=10)이 주어집니다.
 세 번 째 줄부터 현수가 짠 N개의 수업설계가 주어집니다.(수업설계의 길이는 30이하이다) 수업설계는 같은 과목을 여러 번 이수하도록 설계해도 됩니다.
@@ -19,9 +20,11 @@ C, G, E, A, D, B 순서로 짰다면 잘 못 설계된 수업계획이 됩니다
 
 '''
 
+# 코드1
+
 from collections import deque
 
-need=input()
+need=input() #무조건 수강해야 하는 순서
 n=int(input())
 
 for i in range(n):
@@ -29,10 +32,45 @@ for i in range(n):
   dq=deque(need)
   for x in plan:
     if x in dq:
-      if x! = dq.popleft():
+      if x != dq.popleft():
         print('#%d No' %(i+1))
   else:
     if len(dq) == 0:
       print('#%d Yes' %(i+1))
     else:
       print('#%d No' %(i+1))
+
+# 코드2
+
+need = input()
+t = int(input())
+
+
+def check(plan, need):
+    need_index = 0
+    for subject in plan:
+        if subject == need[need_index]:
+            need_index += 1
+            if need_index == len(need):
+                return True
+    return False
+
+def check2(plan, need):
+    from collections import deque
+    dq = deque(need)
+    for subject in plan:
+        if subject == dq[0]:
+            dq.popleft()
+            if not dq:
+                return True
+    return False
+
+
+for i in range(t):
+    plan = input()
+    if check(plan, need):
+        print(f"#{i+1} Yes")
+    else:
+        print(f"#{i+1} No")
+
+
