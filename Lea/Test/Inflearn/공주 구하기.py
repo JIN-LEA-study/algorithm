@@ -45,13 +45,13 @@ print(dq)
 dq = deque(dq) #파이선 라이브러리 dq 자료구조 만들기
 
 while dq:
-    for _ in range(k-1):
-        cur=dq.popleft()
-        dq.append(cur)
-    dq.popleft()
-    if len(dq)==1:
-        print(dq[0])
-        dq.popleft() #while문을 끝내려고 brea를 대신 사용해줘도 된다.
+    for _ in range(k-1): #k-1번 반복
+        current=dq.popleft() #앞에꺼 pop
+        dq.append(current) #뒤에 append
+    dq.popleft() #큐에서 사라짐
+    if len(dq)==1: #왕자가 한명 남았을 때
+        print(dq[0]) #큐의 첫번째
+        dq.popleft() #while문을 끝내려고 break를 대신 사용해줘도 된다. 비워짐
 
 
 

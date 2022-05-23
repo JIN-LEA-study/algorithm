@@ -29,6 +29,8 @@ gooG
 
 '''
 
+#%d 정수, %f 실수, %s 문자열
+
 #방법1
 n = int(input()) #정수로 받음
 for i in range(n):
@@ -47,7 +49,7 @@ for i in range(n):
 n= int(input())
 for i in range(n):
   string = input()
-  string = string.upper()
+  string = string.upper() #모든 문자 대문자로 변경
   # 맨 뒷자리부터 한단계씩 작아짐
   if string == string[::-1]:
     print('#%d YES' %(i+1))
