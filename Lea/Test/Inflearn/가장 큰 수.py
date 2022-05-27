@@ -32,7 +32,7 @@
 
 
 nums, m = input().split()
-m = int(m)
+m = int(m) #정수로 변환
 # nums = list(nums)
 
 # nums, m = map(int, input().split()) #정수를 띄어쓰기로 받기
